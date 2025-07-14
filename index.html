@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Molnár Boglárka | Art Portfolio</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@500&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
+		/>
+		<link rel="icon" href="favicon.ico" type="image/x-icon" />
+		<style>
+			html {
+				scroll-behavior: smooth;
+			}
+			body {
+				font-family: "Inter", sans-serif;
+				line-height: 1.75;
+			}
+			h1,
+			h2 {
+				font-family: "Playfair Display", serif;
+			}
+			#home::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-image: linear-gradient(
+					to bottom right,
+					rgba(0, 0, 0, 0.6),
+					rgba(0, 0, 0, 0.4)
+				);
+				background-size: cover;
+				background-position: center;
+			}
+		</style>
+	</head>
+	<body class="bg-neutral-950 text-neutral-100">
+		<!-- Navigation -->
+		<nav
+			class="fixed top-0 w-full z-50 bg-black/70 backdrop-blur-md shadow-lg px-6 py-4"
+		>
+			<div class="max-w-7xl mx-auto flex justify-between items-center">
+				<h1 class="text-2xl font-bold text-amber-400">Boglárka's Portfolio</h1>
+				<div class="md:hidden">
+					<button id="menu-toggle" class="text-white focus:outline-none">
+						<svg
+							class="w-6 h-6"
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M4 6h16M4 12h16M4 18h16"
+							/>
+						</svg>
+					</button>
+				</div>
+				<ul
+					id="nav-links"
+					class="hidden md:flex gap-6 text-white text-sm uppercase font-semibold"
+				>
+					<li>
+						<a href="#home" class="hover:text-amber-300 transition">Home</a>
+					</li>
+					<li>
+						<a href="#gallery" class="hover:text-amber-300 transition"
+							>Gallery</a
+						>
+					</li>
+					<li>
+						<a href="#about" class="hover:text-amber-300 transition">About</a>
+					</li>
+					<li>
+						<a href="#contact" class="hover:text-amber-300 transition"
+							>Contact</a
+						>
+					</li>
+				</ul>
+			</div>
+			<ul
+				id="mobile-menu"
+				class="md:hidden hidden flex-col gap-4 mt-4 text-white text-sm uppercase font-semibold"
+			>
+				<li>
+					<a href="#home" class="hover:text-amber-300 transition block">Home</a>
+				</li>
+				<li>
+					<a href="#gallery" class="hover:text-amber-300 transition block"
+						>Gallery</a
+					>
+				</li>
+				<li>
+					<a href="#about" class="hover:text-amber-300 transition block"
+						>About</a
+					>
+				</li>
+				<li>
+					<a href="#contact" class="hover:text-amber-300 transition block"
+						>Contact</a
+					>
+				</li>
+			</ul>
+		</nav>
+
+		<!-- Hero -->
+		<section
+			id="home"
+			class="h-screen flex items-center justify-center pt-16 bg-[url(images/hero-bg.jpg)] bg-no-repeat bg-cover bg-center relative"
+		>
+			<div class="text-center animate-fade-in z-10">
+				<h2
+					class="text-5xl md:text-7xl font-bold text-amber-400 mb-4 drop-shadow-lg"
+				>
+					Welcome to My Portfolio
+				</h2>
+				<p class="text-lg text-neutral-50 max-w-xl mx-auto italic">
+					Bridging technology and imagination, one brushstroke at a time.
+				</p>
+			</div>
+		</section>
+
+		<!-- Gallery -->
+		<section id="gallery" class="py-20 px-6 md:px-16 bg-neutral-950">
+			<h2 class="text-4xl font-bold text-center text-amber-400 mb-12">
+				Gallery
+			</h2>
+			<div
+				class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto"
+			>
+				<!-- Artwork Items -->
+				<a
+					href="images/flamingo.jpeg"
+					data-lightbox="artworks"
+					class="group relative"
+				>
+					<img
+						src="images/flamingo.jpeg"
+						alt="Flamingo artwork"
+						class="rounded-xl shadow-2xl w-full transform transition duration-300 group-hover:scale-105"
+						loading="lazy"
+					/>
+				</a>
+
+				<a
+					href="images/toucan.jpg"
+					data-lightbox="artworks"
+					class="group relative"
+				>
+					<img
+						src="images/toucan.jpg"
+						alt="Toucan artwork"
+						class="rounded-xl shadow-2xl w-full transform transition duration-300 group-hover:scale-105"
+						loading="lazy"
+					/>
+				</a>
+
+				<a
+					href="images/pancakes.jpg"
+					data-lightbox="artworks"
+					class="group relative"
+				>
+					<img
+						src="images/pancakes.jpg"
+						alt="Pancakes artwork"
+						class="rounded-xl shadow-2xl w-full transform transition duration-300 group-hover:scale-105"
+						loading="lazy"
+					/>
+				</a>
+
+				<a
+					href="images/mushroom.jpg"
+					data-lightbox="artworks"
+					class="group relative"
+				>
+					<img
+						src="images/mushroom.jpg"
+						alt="Mushroom artwork"
+						class="rounded-xl shadow-2xl w-full transform transition duration-300 group-hover:scale-105"
+						loading="lazy"
+					/>
+				</a>
+			</div>
+		</section>
+
+		<!-- About -->
+		<section id="about" class="bg-neutral-800 py-20 px-6 text-center md:px-16">
+			<h2 class="text-4xl font-bold text-amber-400 mb-8">About Me</h2>
+			<div
+				class="flex flex-col-reverse md:flex-row items-center justify-center gap-8"
+			>
+				<div class="max-w-2xl text-white/80 leading-relaxed text-left">
+					<p class="mb-4">
+						I'm an artist and mobile developer who finds joy in bringing the
+						world to life through color, detail, and playful perspective.
+						Whether it's nature, creatures, or objects, each piece tells a story
+						through my creative lens.
+					</p>
+					<p class="mb-4">
+						My journey blends logical problem-solving with expressive art. I
+						love experimenting with media, storytelling through illustration,
+						and discovering unexpected beauty.
+					</p>
+					<p>
+						Thank you for visiting, and I hope my work sparks your imagination.
+					</p>
+				</div>
+				<img
+					src="images/me.webp"
+					alt="A picture of me"
+					height="300"
+					width="350"
+					class="rounded-xl shadow-2xl"
+					loading="lazy"
+				/>
+			</div>
+		</section>
+
+		<!-- Contact -->
+		<section
+			id="contact"
+			class="py-20 px-6 text-center bg-gradient-to-br from-neutral-900 to-neutral-950"
+		>
+			<h2 class="text-4xl font-bold text-amber-400 mb-6">Contact</h2>
+			<p class="text-white/80 mb-4">
+				Say hello at
+				<a
+					class="text-amber-500 underline hover:text-amber-300"
+					href="mailto:boglarka_m@yahoo.com"
+					>boglarka_m@yahoo.com</a
+				>
+			</p>
+			<div class="mt-4 flex justify-center gap-6 text-lg">
+				<a
+					href="https://www.instagram.com/boglarka_m.art"
+					class="text-white hover:text-amber-400 transition"
+					target="_blank"
+					>Instagram</a
+				>
+			</div>
+		</section>
+
+		<footer class="text-center py-6 text-white/50 text-sm">
+			© 2025 Molnár Boglárka — All Rights Reserved
+		</footer>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+		<script>
+			// Fade-in hero
+			document.querySelector("#home").classList.add("opacity-0");
+			window.addEventListener("load", () => {
+				const home = document.querySelector("#home");
+				home.classList.remove("opacity-0");
+				home.classList.add(
+					"transition-opacity",
+					"duration-1000",
+					"opacity-100"
+				);
+			});
+
+			// Hamburger toggle
+			const toggle = document.getElementById("menu-toggle");
+			const menu = document.getElementById("mobile-menu");
+			toggle.addEventListener("click", () => {
+				menu.classList.toggle("hidden");
+			});
+		</script>
+	</body>
+</html>
